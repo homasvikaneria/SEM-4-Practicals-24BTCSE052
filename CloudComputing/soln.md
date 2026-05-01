@@ -59,41 +59,50 @@
 - Faster emergency response  
 - Real-time decision making  
 
-
-
 ---
 
-# Collaborative Coding Platform
+# Collaborative Coding Platform – Explanation
 
-## Deployment Model
-- Hybrid Cloud  
-  - Public cloud: scalability, cost efficiency, global access  
-  - Private cloud: secure code execution  
+## 1. Overview
+- Online platform where multiple users can write, edit, and run code in real time  
+- Used for coding practice, interviews, and contests  
 
-## Service Model
-- PaaS + IaaS  
-  - PaaS: app hosting, database, APIs  
-  - IaaS: Docker containers  
+## 2. Architecture
+- **Frontend**: User interface for writing code  
+- **Backend**: Handles code execution and user requests  
+- **Cloud**: Stores data and manages scalability  
 
-## Key Features
-- Real-time coding & pair programming  
-- Multi-language support  
+## 3. Code Execution Process
+1. User writes code and clicks “Run”  
+2. Request goes to backend server  
+3. Backend identifies programming language  
+4. Creates isolated container (Docker)  
+5. Loads compiler/interpreter  
+6. Code is compiled and executed  
+7. Output is generated and sent back to user  
+8. Container is destroyed after execution  
 
-## Architecture
-- Frontend + WebSockets  
+## 4. Real-Time Collaboration
+- WebSockets used for live editing  
+- Multiple users can see changes instantly  
+- Supports pair programming  
 
-## Security
-- Docker sandboxing  
-- Resource limits  
+## 5. Scalability
+- Load balancer distributes user requests  
+- Auto-scaling creates more containers during high traffic  
+- Handles multiple users simultaneously  
 
-## Scaling Strategy
-- Horizontal scaling  
-- CDN for fast global access  
+## 6. Security
+- Code runs in isolated containers  
+- Resource limits (CPU, memory) applied  
+- Prevents malicious code execution  
 
-## Cost Optimization
-- Auto scaling  
+## 7. Storage
+- Code, results, and logs stored in database  
+- Used for history and analysis  
 
-## Risks
-- Malicious code attacks  
-- High concurrent traffic  
-- Infrastructure complexity  
+## 8. Benefits
+- Real-time coding  
+- Secure execution  
+- High performance  
+- Scalable system  
